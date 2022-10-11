@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Operations Version="1.0" xmlns="http://schemas.microsoft.com/sqlserver/dac/Serialization/2012/02">
+  <Operation Name="Rename Refactor" Key="0bc80d2c-9dcf-45ae-ae40-3db4f8bc71a7" ChangeDateTime="06/06/2022 17:08:42">
+    <Property Name="ElementName" Value="[dbo].[Counter].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Counter]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="CounterId" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="e6649a23-ae01-4bcb-a8d6-78495bd538e8" ChangeDateTime="06/06/2022 17:11:46">
+    <Property Name="ElementName" Value="[dbo].[ConstServiceType].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[ConstServiceType]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="ServiceTypeId" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="09f392a1-3ce4-4a01-aefd-95a64a21c6f9" ChangeDateTime="06/06/2022 17:12:26">
+    <Property Name="ElementName" Value="[dbo].[ConstServiceType].[ServiceType]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[ConstServiceType]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="ServiceTypeName" />
+  </Operation>
+  <Operation Name="Move Schema" Key="27430632-0f3d-42bc-b674-d11e8e65ade8" ChangeDateTime="06/08/2022 14:22:33">
+    <Property Name="ElementName" Value="[dbo].[ConstCounter]" />
+    <Property Name="ElementType" Value="SqlTable" />
+    <Property Name="NewSchema" Value="queue" />
+    <Property Name="IsNewSchemaExternal" Value="False" />
+  </Operation>
+  <Operation Name="Move Schema" Key="be462fb5-177b-4155-886a-8ccb244f3723" ChangeDateTime="06/08/2022 14:22:57">
+    <Property Name="ElementName" Value="[dbo].[ConstServiceType]" />
+    <Property Name="ElementType" Value="SqlTable" />
+    <Property Name="NewSchema" Value="queue" />
+    <Property Name="IsNewSchemaExternal" Value="False" />
+  </Operation>
+  <Operation Name="Move Schema" Key="c196841b-53e1-4935-846d-2804691a8445" ChangeDateTime="06/08/2022 14:23:26">
+    <Property Name="ElementName" Value="[dbo].[Status]" />
+    <Property Name="ElementType" Value="SqlTable" />
+    <Property Name="NewSchema" Value="queue" />
+    <Property Name="IsNewSchemaExternal" Value="False" />
+  </Operation>
+  <Operation Name="Move Schema" Key="68d620a4-e980-40c9-ad21-4571fbb4c6b3" ChangeDateTime="06/08/2022 14:23:51">
+    <Property Name="ElementName" Value="[dbo].[ConstType]" />
+    <Property Name="ElementType" Value="SqlTable" />
+    <Property Name="NewSchema" Value="queue" />
+    <Property Name="IsNewSchemaExternal" Value="False" />
+  </Operation>
+  <Operation Name="Move Schema" Key="2b2e5a35-154d-49ba-ae34-a4fed15c8160" ChangeDateTime="06/08/2022 14:26:51">
+    <Property Name="ElementName" Value="[dbo].[ConstType]" />
+    <Property Name="ElementType" Value="SqlTable" />
+    <Property Name="NewSchema" Value="queue" />
+    <Property Name="IsNewSchemaExternal" Value="False" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="74a392fb-4b81-4939-b0a3-02233001ce94" ChangeDateTime="06/11/2022 16:33:24">
+    <Property Name="ElementName" Value="[queue].[fnQueue_GetLastCall]" />
+    <Property Name="ElementType" Value="SqlInlineTableValuedFunction" />
+    <Property Name="ParentElementName" Value="[queue]" />
+    <Property Name="ParentElementType" Value="SqlSchema" />
+    <Property Name="NewName" Value="fnQueue_GetCurrentQueue" />
+  </Operation>
+  <Operation Name="Move Schema" Key="7ea5c003-3d85-4e80-bab2-2bf3a1f26090" ChangeDateTime="06/13/2022 15:20:48">
+    <Property Name="ElementName" Value="[dbo].[spServiceType_Get]" />
+    <Property Name="ElementType" Value="SqlProcedure" />
+    <Property Name="NewSchema" Value="queue" />
+    <Property Name="IsNewSchemaExternal" Value="False" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="62dffc59-a546-4910-8cc3-b242bab59129" ChangeDateTime="06/26/2022 02:20:10">
+    <Property Name="ElementName" Value="[queue].[Status].[StatusId]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[queue].[Status]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="QueueStatusId" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="a42b25a3-6db3-4da9-8756-56148053fdb5" ChangeDateTime="06/26/2022 14:19:04">
+    <Property Name="ElementName" Value="[queue].[Status]" />
+    <Property Name="ElementType" Value="SqlTable" />
+    <Property Name="ParentElementName" Value="[queue]" />
+    <Property Name="ParentElementType" Value="SqlSchema" />
+    <Property Name="NewName" Value="[ConstStatus]" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="df222634-78b5-4d60-98d3-d7b593eddff5" ChangeDateTime="06/30/2022 15:00:09">
+    <Property Name="ElementName" Value="[queue].[spOutpatient_ByStatus]" />
+    <Property Name="ElementType" Value="SqlProcedure" />
+    <Property Name="ParentElementName" Value="[queue]" />
+    <Property Name="ParentElementType" Value="SqlSchema" />
+    <Property Name="NewName" Value="[spOutpatient_GetByStatus]" />
+  </Operation>
+</Operations>

@@ -1,0 +1,21 @@
+﻿-- = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
+-- Author:		Start-X
+-- Create date: <Create Date,,>
+-- Description:	Menampilkan Tujuan Permintaan Item Farmasi
+-- = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
+CREATE PROCEDURE [dbo].[farmasiMasterObatJenisStokSelectForMasterRuangan]
+	-- Add the parameters for the stored procedure here
+	
+AS
+BEGIN
+	-- SET NOCOUNT ON added to prevent extra result sets from
+	-- interfering with SELECT statements.
+	SET NOCOUNT ON;
+
+    -- Insert statements for procedure here
+	SELECT idJenisStok
+		  ,namaJenisStok
+	  FROM dbo.farmasiMasterObatJenisStok
+	 WHERE idJenisStok Not In(1,6)
+  ORDER BY namaJenisStok
+END
